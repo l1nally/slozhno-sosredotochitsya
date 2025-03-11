@@ -34,5 +34,6 @@
     --title-shadow-color: #ff0070;
     --hover-outline: rgba(50, 49, 45, 0.4);
     --background-image: url(../images/cover-image-light.png);
+    --rec-hidden: none;
   }
 }

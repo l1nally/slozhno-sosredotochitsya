@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   color: var(--text-color);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-size: 18px;
   background-color: var(--bg-color);
   background-image: var(--background-image);
@@ -92,7 +92,7 @@
 .header__theme-menu-button {
   border: 0;
   padding: 1.5px 13px;
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   line-height: 1;
   text-transform: lowercase;
   background-color: transparent;
@@ -129,7 +129,7 @@
 .title-decor {
   display: inline-block;
   color: var(--accent-text-color);
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font), monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
@@ -157,19 +157,19 @@
 
 .content__paragraph {
   color: var(--text-color);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-size: 18px;
   line-height: 1.3;
 }
 
 .link-decor {
   color: var(--text-color);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.3;
   text-decoration: none;
-  text-shadow: 2px 1px 0px var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .link-decor:hover {
@@ -186,7 +186,7 @@
 
 .content__title {
   color: var(--title-color);
-  font-family: var(--main-font, sans-serif);
+  font-family: var(--main-font, monospace);
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
@@ -194,7 +194,7 @@
 
 .title-decor-light {
   color: var(--accent-text-color);
-  font-family: var(--main-font), sans-serif;
+  font-family: var(--main-font), monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.3;
@@ -223,6 +223,7 @@
 }
 
 .content__image {
+  object-fit: cover;
   width: 100%;
 }
 
@@ -247,7 +248,7 @@
   .header {
     grid-template-columns: repeat(2, 1fr);
     padding: 20px 20px 20px 0;
-    min-block-size: 1024px;
+    block-size: 100vh;
   }
 
   .header__theme-menu {
@@ -343,36 +344,31 @@
   .image__sunset {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
-    object-fit: cover;
   }
 
   .image__ice-cream {
     grid-column: 3 / 3;
     grid-row: 1 / 3;
     height: 100%;
-    object-fit: cover;
   }
 
   .image__tape {
     grid-column: 1 / 1;
     grid-row: 2 / 4;
     height: 100%;
-    object-fit: cover;
   }
   .image__books {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    object-fit: cover;
   }
   .image__street {
     grid-column: 2 / 4;
     grid-row: 3 / 4;
-    object-fit: cover;
   }
 
   .footer {
     padding: 20px;
-    min-block-size: 1024px;
+    block-size: 100vh;
   }
 
   .footer__title {
@@ -383,7 +379,7 @@
 @media (width>=1024px) {
   .header {
     align-items: start;
-    min-block-size: 768px;
+    block-size: 100vh;
   }
 
   .header__theme-menu {
@@ -431,6 +427,6 @@
   }
 
   .footer {
-    min-block-size: 768px;
+    block-size: 100vh;
   }
 }

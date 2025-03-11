@@ -12,6 +12,6 @@
   --title-color: #ff0070;
   --title-shadow-color: #ff0070;
   --hover-outline: rgba(255, 0, 112, 0.4);
-  --rec-hidden: none;
+  --rec-hidden: inline-flex;
   --background-image: url(../images/cover-image-dark.png);
 }
